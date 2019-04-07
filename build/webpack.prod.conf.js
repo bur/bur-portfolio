@@ -14,7 +14,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const env = require('../config/prod.env')
 
 // add following somewhere in the top
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
+var PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -35,12 +35,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new PrerenderSpaPlugin(
-      // Path to compiled app
-      path.join(__dirname, '../dist'),
-      // List of endpoints you wish to prerender
-      [ '/' ]
-    ),
+    new PrerenderSpaPlugin({
+      staticDir: path.join(__dirname, '../dist'),
+      routes: ['/']
+    }),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
