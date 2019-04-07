@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
+import jquery from 'jquery';
 
 require('bootstrap');
 
@@ -9,7 +10,7 @@ require('jquery.easing');
 
 require('bootstrap/dist/css/bootstrap.css');
 
-require('devicons/css/devicons.css');
+require('devicon/devicon.css');
 
 require('font-awesome/css/font-awesome.css');
 
