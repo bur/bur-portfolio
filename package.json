@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "deploy-prod": "aws s3 sync ./dist/ s3://ericjeffers-io"
+    "deploy-prod": "aws s3 sync ./dist/ s3://www.ericjeffers.io"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
@@ -21,13 +21,14 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.18",
     "devicon": "^2.2.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "popper.js": "^1.15.0",
     "prerender-spa-plugin": "^3.4.0",
-    "vue": "^2.5.2"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
